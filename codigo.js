@@ -15,6 +15,11 @@ async function obtenerClima() {
     mostrarClima(data)
 }
 
+inpCiudad.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        obtenerClima();
+    }
+});
 
 function mostrarClima(data) {
     document.querySelector(".clima-icono").src = data.current.condition.icon ;
